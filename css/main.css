@@ -349,7 +349,7 @@ template {
 }
 
 
-
+/* ###   end css normalize   ### */
 
 
 
@@ -624,6 +624,9 @@ section {
 
 .detail-item span {
   font-size: 2.5rem;
+}
+.detail-item span i{
+  margin: 0 0.6rem;
 }
 
 .detail-item h2 {
