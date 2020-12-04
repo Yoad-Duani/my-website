@@ -88,7 +88,7 @@ section {
 
 /* navbar and header */
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/header-bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/header-bg.webp);
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -309,7 +309,7 @@ section {
 
 /* video */
 .video {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/video-bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/video-bg.webp);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -488,7 +488,7 @@ section {
 
 /* testimonial section */
 .testimonial{
-  background-image: linear-gradient( rgba(49, 77, 146, 0.8),rgba(49, 77, 146, 0.9)),url(../assets/testimonial-bg.jpg);
+  background-image: linear-gradient( rgba(49, 77, 146, 0.8),rgba(49, 77, 146, 0.9)),url(../assets/testimonial-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
