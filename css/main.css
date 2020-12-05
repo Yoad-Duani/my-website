@@ -1001,6 +1001,25 @@ background: white;
 }
 
 
+/* others */
+.whats-app {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    bottom: 35px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 50px;
+    box-shadow: 2px 2px 3px #999;
+    right: 20px;
+    z-index: 100;
+}
+.my-float {
+    margin-top: 10x;
+}
+
 
 
 
