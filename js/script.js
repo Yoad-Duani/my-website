@@ -3,10 +3,21 @@ $(document).ready(function() {
   // wow initiation
   new WOW().init();
 
+  //
+  // jQuery.getScript("resources/Magnific-Popup-master/dist/jquery.magnific-popup.js");
+
   // navigation bar toggle
   $('#navbar-toggler').click(function() {
     $(".navbar-collapse").slideToggle(400);
   });
+
+  // navigation bar link
+  $('.nav-link').click(function() {
+    $(".navbar-collapse").slideToggle(400);
+  });
+
+
+
 
   //navbar bg change on scroll
   $(window).scroll(function() {

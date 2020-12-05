@@ -456,7 +456,7 @@ section {
 
 /* navbar and header */
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../assets/header-bg.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(../assets/header-bg.webp);
   min-height: 100vh;
   background-position: center;
   background-size: cover;
@@ -558,7 +558,37 @@ section {
 .hero-div {
   flex: 1;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
+  padding-left: 2.5rem;
+}
+
+ /* .header .row{
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  /* grid-template-columns: 1fr 40rem; */
+  /* align-items: center; */
+  /* column-gap: 2rem;
+} */
+.header .row.about-item{
+ margin-top: 11rem;
+ display: grid;
+ /* grid-template-columns: repeat(1, 1fr); */
+ grid-template-columns: 2fr 1fr;
+ /* align-items: center; */
+ column-gap: 2rem;
+}
+.about-left .row{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 40rem; */
+  /* align-items: center; */
+  column-gap: 2rem;
+}
+
+.my-profile{
+  width: 60%;
 }
 
 .hero-div h1 {
@@ -590,7 +620,7 @@ section {
 .btn-trans {
   color: #fff;
   transition: var(--transition);
-  display: none;
+  /* display: none; */
 }
 
 .btn-trans:hover {
@@ -602,12 +632,31 @@ section {
   background: #fff;
   color: var(--night-rider);
   transition: var(--transition);
+  display: none;
 }
 
 .btn-white:hover {
   background: transparent;
   color: #fff;
 }
+
+
+
+/* About Me section */
+/* .about .about-img{
+  position: relative;
+}
+
+.about .about-img{
+}
+
+.about .about-img .man-img{
+  position: absolute;
+} */
+
+
+
+
 
 /* ## detail ## */
 .detail {
@@ -1001,24 +1050,27 @@ background: white;
 }
 
 
+
+
 /* others */
 .whats-app {
     position: fixed;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     bottom: 35px;
     background-color: #25d366;
     color: #FFF;
     border-radius: 50px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     box-shadow: 2px 2px 3px #999;
     right: 20px;
     z-index: 100;
 }
 .my-float {
-    margin-top: 10x;
+    margin-top: 10px;
 }
+
 
 
 
@@ -1140,11 +1192,14 @@ background: white;
     font-size: 3.8rem;
   }
 
-  .btn-trans {
+  /* .btn-trans {
     display: inline-block;
-    ;
     margin-right: 0.8rem;
-  }
+  } */
+  /* .btn-white {
+    display: inline-block;
+    margin-right: 0.8rem;
+  } */
 
   /* navbar change */
   .cng-navbar {
@@ -1178,10 +1233,16 @@ background: white;
 }
 
 @media screen and (min-width: 1200px) {
-  .hero-div h1 {
-    width: 70%;
-    margin-left: auto;
+  .hero-div{
+    padding-left: 6rem;
+  }
+  .hero-div h1,h2,h3,h4,p,.hero-btns {
+    /* width: 90%; */
+    /* margin-left: auto; */
     margin-right: auto;
+  }
+  .about-left .row{
+    width: 100%;
   }
 
   .detail .row {
@@ -1200,4 +1261,46 @@ background: white;
   .contact-right{
     padding-left: 4rem!important;
   }
+  .my-profile{
+    width: 50%;
+  }
+}
+
+@media (max-width:660px){
+  .hero-div h1,h2,h3,h4,p,.hero-btns {
+    /* width: 90%; */
+    /* margin-left: auto; */
+    /* font-size: 75%; */
+  }
+  .hero-div{
+    padding-left: 0;
+  }
+  .header .row.about-item{
+   margin-top: 5rem;
+   grid-template-columns: 2fr;
+    column-gap: 1rem;
+  }
+  .about-right .container{
+    padding: 0;
+    height: 0;
+    width: 0;
+  }
+  .my-profile{
+    position: relative;
+    width: 6rem;
+    /* right: 5rem; */
+    left: 3.5rem;
+    bottom: 25rem;
+  }
+  .hero-div p{
+    font-size: 0.8rem;
+  }
+  .hero-div h2,h3{
+    font-size: 1.1rem;
+  }
+  .hero-btns .btn-trans,.btn-white{
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+  }
+
 }
