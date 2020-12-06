@@ -1,4 +1,9 @@
+// var isHover new Boolean(false)
+// var isHover = false;
 $(document).ready(function() {
+
+  var isHover = false;
+
 
   // wow initiation
   new WOW().init();
@@ -69,17 +74,14 @@ $(document).ready(function() {
 
 
   // faq accordion
-  $('.faq-head').each(function(){
-    $(this).click(function(){
+  $('.faq-head').each(function() {
+    $(this).click(function() {
       $(this).next().toggleClass('show-faq-content');
       let icon = $(this).children('span').children("i").attr('class');
 
-      if(icon == "fas fa-plus")
-      {
+      if (icon == "fas fa-plus") {
         $(this).children('span').html('<i class = "fas fa-minus"></i>')
-      }
-      else
-      {
+      } else {
         $(this).children('span').html('<i class = "fas fa-plus"></i>')
       }
     });
@@ -89,12 +91,41 @@ $(document).ready(function() {
 
   //testimonial carousel
   $('.testimonial .owl-carousel').owlCarousel({
-    loop:true,
-    autoplay:true,
-    dots:true,
-    nav:false,
-    items:1
+    loop: true,
+    autoplay: true,
+    dots: true,
+    nav: false,
+    items: 1
   });
+
+
+  // $('.hover').on('touchstart touchend', function(e) {
+  //       e.preventDefault();
+  //       $(this).toggleClass('hover_effect');
+  //   });
+
+
+  // $('.snip1482').click(function() {
+  //   // $(".navbar-collapse").slideToggle(400);
+  //   if (isHover === false) {
+  //     if (this.matches(':hover')) {
+  //
+  //
+  //       isHover = true;
+  //     }
+  //   } else {
+  //     console.log(20);
+  //     isHover = false;
+  //   }
+  // });
+
+  /* Demo purposes only */
+  // $(".hover").mouseleave(
+  //   function () {
+  //     $(this).removeClass("hover");
+  //   }
+  // );
+
 
 
 });
