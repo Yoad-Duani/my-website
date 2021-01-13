@@ -2,6 +2,31 @@
 // var isHover = false;
 $(document).ready(function() {
 
+
+
+  // counter up
+  const counters = document.querySelectorAll('.counter')
+  const speed = 100;
+  counters.forEach(counter => {
+    const updateCount = () =>{
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const inc = target / speed;
+
+      if(count < target){
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCount,100);
+      }
+      else{
+        count.innerText = target;
+      }
+    }
+    updateCount();
+  });
+  //
+
+
+
   var isHover = false;
 
 
@@ -31,6 +56,16 @@ $(document).ready(function() {
       $(".navbar").addClass("cng-navbar");
     } else {
       $(".navbar").removeClass("cng-navbar");
+    }
+  });
+
+  //navbar color link change on scroll
+  $(window).scroll(function() {
+    let pos = $(window).scrollTop();
+    if (pos > 100) {
+      $(".nav-link").addClass("nav-link-change");
+    } else {
+      $(".nav-link").removeClass("nav-link-change");
     }
   });
 
