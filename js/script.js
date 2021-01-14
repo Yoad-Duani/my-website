@@ -5,6 +5,8 @@ $(document).ready(function() {
 
 
   // counter up
+
+  setTimeout(function(){
   const counters = document.querySelectorAll('.counter')
   const speed = 100;
   counters.forEach(counter => {
@@ -23,7 +25,8 @@ $(document).ready(function() {
     }
     updateCount();
   });
-  //
+},3300);
+  // end counter up
 
 
 
@@ -39,6 +42,7 @@ $(document).ready(function() {
   // navigation bar toggle
   $('#navbar-toggler').click(function() {
     $(".navbar-collapse").slideToggle(400);
+    $(this).find("i").toggleClass("fas fa-bars fas fa-times");
   });
 
   // navigation bar link
@@ -68,6 +72,22 @@ $(document).ready(function() {
       $(".nav-link").removeClass("nav-link-change");
     }
   });
+
+
+
+
+
+
+  // navbar change toggler
+  // $('#navbar-toggler').click(function() {
+    // $('#display_advance').toggle('1000');
+    // $("i", this).toggleClass("icon-circle-arrow-up icon-circle-arrow-down");
+// });
+  // <i class="fas fa-times"></i>
+
+
+
+
 
 
   // sample video popup
@@ -134,6 +154,20 @@ $(document).ready(function() {
   });
 
 
+
+
+setTimeout(function(){
+  $('body').addClass('loaded');
+
+},3000);
+
+
+
+
+
+
+
+
   // $('.hover').on('touchstart touchend', function(e) {
   //       e.preventDefault();
   //       $(this).toggleClass('hover_effect');
@@ -164,3 +198,27 @@ $(document).ready(function() {
 
 
 });
+
+
+// var loader;
+// function loadNow(opacity){
+//   if(opacity <= 0){
+//     displayContent();
+//   }
+//   else{
+//     loader.style.opacity = opacity;
+//     window.setTimeout(function(){
+//       loadNow(opacity - 0.5)
+//     },100);
+//   }
+// }
+//
+// function displayContent(){
+//   loader.style.display = 'none';
+//   document.getElementById('')
+// }
+//
+// document.addEventListener("DOMContentLoaded" , function(){
+//   loader = document.getElementById('loader');
+//   loadNow(1);
+// });

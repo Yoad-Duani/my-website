@@ -347,6 +347,22 @@ template {
   --transition: all 0.5s ease-in-out;
 }
 
+/* #loader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  overflow: visible;
+  background: #314d92 url(../assets/loader.gif) no-repeat center;
+} */
+
+@font-face {
+    font-family: "Aquire";
+     /* font-weight: bold; */
+    src: url(../resources/Aquire.otf) format("opentype");
+}
+
+
 * {
   font-family: "Hind Siliguri", sans-serif;
   padding: 0;
@@ -455,7 +471,7 @@ section {
   /* backdrop-filter: blur(10px); */
   /* -webkit-backdrop-filter: blur(10px); */
   /* filter:blur(3px); */
-  z-index: 999;
+  z-index: 500;
 }
 
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
@@ -496,12 +512,17 @@ section {
 }
 
 .navbar-brand {
+  font-family: "Aquire" ,sans-serif;
   font-weight: 500;
   color: var(--night-rider);
+  transition: var(--transition);
 }
 
 .navbar-brand span {
-  color: var(--mount-meadow);
+  color:#4693bd ;
+  /* font-family: "Aquire" ,sans-serif; */
+  font-weight: 500;
+  font-size: 1.9rem;
 }
 
 .navbar-toggler {
@@ -603,7 +624,7 @@ height: auto;
   /* border-radius: 50%; */
   /* border: 1.5px solid #fff; */
   position: relative;
-  z-index: 10;
+  z-index: 5;
 }
 
 /* .card-profile-img{
@@ -1040,12 +1061,25 @@ font-weight: bold;
 .contact .row>div h2 {
   font-size: 1.4rem;
   font-weight: 300;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .contact-right .text{
   display: flex;
 }
+
+.contact-right a{
+  opacity: 1;
+  font-weight: bold;
+  color: #4588ed;
+}
+
+
+
+/* .contact-right h2{
+  opacity: 0.6;
+} */
+
 
 .contact-right .text div{
   margin: 0
@@ -1117,6 +1151,32 @@ font-weight: bold;
   margin: 2rem 0;
 }
 
+
+.name-contact,
+.email-contact {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.name-contact input[type="text"],
+.email-contact input[type="email"]{
+    padding-left: 2rem;
+    position: relative;
+  }
+
+.name-contact i:first-child,
+.email-contact i:first-child {
+  left: 7.5px;
+    position: absolute;
+    z-index: 100;
+    margin-right: 0.5rem;
+}
+
+
+
+
+
 /* footer */
 .footer {
   text-align: center;
@@ -1166,7 +1226,7 @@ font-weight: bold;
   font-size: 40px;
   /* box-shadow: 2px 2px 3px #999; */
   right: 10px;
-  z-index: 100;
+  z-index: 50;
 }
 
 .my-float {
@@ -1252,6 +1312,16 @@ font-weight: bold;
 }
 
 @media screen and (min-width: 992px) {
+
+  #loader{
+    /* position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: visible; */
+    /* background: #314d92 url(../assets/loader-large.gif) no-repeat center; */
+  }
+
   .navbar {
     background: transparent;
     /* opacity: 0.02 */
@@ -1266,7 +1336,7 @@ font-weight: bold;
   }
 
   .navbar-brand {
-    color: var(--white-smoke);
+    color: #fff;
     font-size: 2rem;
   }
 
@@ -1372,6 +1442,7 @@ font-weight: bold;
 
   .cng-navbar .navbar-brand {
     color: var(--night-rider);
+
   }
 
   .cng-navbar .nav-link {
