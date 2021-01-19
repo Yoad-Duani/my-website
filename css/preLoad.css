@@ -33,7 +33,7 @@
 
 }
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+
   .text-preload {
     /* background: rgba(255, 255, 255, 0.2); */
     backdrop-filter: blur(4px);
@@ -171,4 +171,3 @@
              font-size: 3.2rem;
            }
           }
-  }
