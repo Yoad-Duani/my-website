@@ -170,7 +170,12 @@ setTimeout(function(){
 
 
 
-
+$(document).ready(function() {
+   var screenHeight = $(window).height();
+   $('div-with-background-image').css('height', screenHeight + 'px');
+});
+  
+  
   
 //   $(function(){
 
