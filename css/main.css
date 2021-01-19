@@ -451,7 +451,8 @@ section {
   background-image: linear-gradient(rgba(40, 77, 146, 0.93), rgba(170, 170, 170, 0.93)), url(../assets/header-bg.webp);
   /* min-height: 100vh; */
   height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
- height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+ /* height: calc(var(--vh, 1vh) * 100); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -461,6 +462,10 @@ section {
   flex-direction: column;
   justify-content: stretch;
   overflow: hidden;
+}
+
+div.container.amimate-background{
+  height: 9rem;
 }
 
 .navbar {
@@ -589,7 +594,7 @@ section {
 .header .row.about-item {
   grid-auto-rows: minmax(100px, auto);
   grid-template-columns: repeat(12, 1fr);
-  margin-top: 9rem;
+  /* margin-top: 9rem; */
   display: grid;
   /* column-gap: 2rem; */
 }
