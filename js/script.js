@@ -171,6 +171,25 @@ setTimeout(function(){
 
 
 
+  
+  $(function(){
+
+  var $w = $(window),
+      $header = $('.header');
+
+  // Fix background image jump on mobile
+  if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+    $header.css({'top': 'auto', 'bottom': 0});
+
+    $w.resize(sizeBackground);
+    sizeBackground();
+  }
+
+  function sizeBackground() {
+     $header.height(screen.height);
+  }
+});
+
 
 
 
