@@ -10,7 +10,7 @@
   position: relative;
   width : 100%;
    height: 100%;
-   z-index: 600;
+   z-index: 601;
    /* top: 50%;
 	 left: 50%; */
    display: flex;
@@ -26,7 +26,20 @@
 	 display: inline-block;
 	 margin-left: 5px;
 	 font-weight: bold;
+	 /* background: linear-gradient(rgba(69, 97, 166, 0.5), rgba(200, 200, 220, 0.5)); */
+	 /* background: #fff; */
+	 /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+
 }
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .text-preload {
+    /* background: rgba(255, 255, 255, 0.2); */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
  .bounceball {
 	 position: relative;
 	 display: inline-block;
@@ -66,7 +79,7 @@
 .wrap .loader-section {
     position: fixed;
     top: 0;
-    width: 51%;
+    width: 50.1%;
     height: 100%;
     background: #fff;
     z-index: 599;
@@ -98,6 +111,22 @@
                 transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
 }
 
+/* .section-slide-preLoad{
+	position: absolute;
+	top: 0;
+	width: 18rem;
+	height: 200px;
+	background: linear-gradient(rgba(89, 117, 186, 0.4), rgba(220, 220, 220, 0.6));
+	z-index: 600;
+	visibility: hidden;
+} */
+
+/* .wrap .loader-section.section-left .section-slide-preLoad-left{
+	right: 0;
+}
+.section-slide-preLoad-right{
+} */
+
 .loaded .loading {
     opacity: 0;
 
@@ -106,7 +135,7 @@
 }
 
 .loaded .wrap {
-    visibility: hidden;
+    /* visibility: hidden; */
 
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);

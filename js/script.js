@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
   const counters = document.querySelectorAll('.counter')
-  const speed = 100;
+  const speed = 300;
   counters.forEach(counter => {
     const updateCount = () =>{
       const target = +counter.getAttribute('data-target');
@@ -17,7 +17,7 @@ $(document).ready(function() {
 
       if(count < target){
         counter.innerText = Math.ceil(count + inc);
-        setTimeout(updateCount,100);
+        setTimeout(updateCount,120);
       }
       else{
         count.innerText = target;
@@ -25,7 +25,7 @@ $(document).ready(function() {
     }
     updateCount();
   });
-},3300);
+},3500);
   // end counter up
 
 
@@ -48,6 +48,7 @@ $(document).ready(function() {
   // navigation bar link
   $('.nav-link').click(function() {
     $(".navbar-collapse").slideToggle(400);
+    $("#navbar-toggler").find("i").toggleClass("fas fa-bars fas fa-times");
   });
 
 
@@ -102,6 +103,12 @@ $(document).ready(function() {
       fixedContentPos: false
     });
   });
+
+
+  // slide pre-loade
+  // $(document).ready(function(){
+  //
+  // });
 
 
 
@@ -160,6 +167,7 @@ setTimeout(function(){
   $('body').addClass('loaded');
 
 },3000);
+
 
 
 
