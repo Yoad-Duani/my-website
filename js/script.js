@@ -172,23 +172,23 @@ setTimeout(function(){
 
 
   
-  $(function(){
+//   $(function(){
 
-  var $w = $(window),
-      $header = $('.header');
+//   var $w = $(window),
+//       $header = $('.header');
 
-  // Fix background image jump on mobile
-  if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
-    $header.css({'top': 'auto', 'bottom': 0});
+//   // Fix background image jump on mobile
+//   if ((/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+//     $header.css({'top': 'auto', 'bottom': 0});
 
-    $w.resize(sizeBackground);
-    sizeBackground();
-  }
+//     $w.resize(sizeBackground);
+//     sizeBackground();
+//   }
 
-  function sizeBackground() {
-     $header.height(screen.height);
-  }
-});
+//   function sizeBackground() {
+//      $header.height(screen.height);
+//   }
+// });
 
 
 
